@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button LoginButton;
     Button RegisterButton;
+    final Button button3 = (Button)findViewById(R.id.button3);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 }
