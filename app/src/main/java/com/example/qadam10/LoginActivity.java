@@ -14,6 +14,7 @@ public class LoginActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigation;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -22,13 +23,10 @@ public class LoginActivity extends AppCompatActivity {
         BottomNavigationView bottomNav=(BottomNavigationView)findViewById(R.id.bottomNavigationView);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-
-
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout,new homeFragment()).commit();
 
-
-
     }
+
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
