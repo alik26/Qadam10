@@ -8,19 +8,35 @@
 
     <fragment
         android:id="@+id/calendarFragment"
-        android:name="com.example.qadam10.calendarFragment"
+        android:name="com.example.qadam10.CalendarFragment"
         android:label="fragment_calendar"
-        tools:layout="@layout/fragment_calendar" />
+        tools:layout="@layout/fragment_calendar" >
+        <action
+            android:id="@+id/action_calendarFragment_to_doneFragment"
+            app:destination="@id/doneFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.qadam10.homeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/activity_login" />
-    <fragment
-        android:id="@+id/doneFragment2"
-        android:name="com.example.qadam10.doneFragment"
+        android:id="@+id/doneFragment"
+        android:name="com.example.qadam10.DoneFragment"
         android:label="fragment_done"
         tools:layout="@layout/fragment_done" />
-
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.qadam10.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_calendarFragment"
+            app:destination="@id/calendarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/zhanaTapsyrmaFragment"
+        android:name="com.example.qadam10.ZhanaTapsyrmaFragment"
+        android:label="fragment_zhana_tapsyrma"
+        tools:layout="@layout/fragment_zhana_tapsyrma" >
+        <action
+            android:id="@+id/action_zhanaTapsyrmaFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 
 </navigation>

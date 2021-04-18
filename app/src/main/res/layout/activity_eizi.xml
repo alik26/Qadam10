@@ -4,41 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DoneFragment">
+    android:background="@drawable/background"
+    tools:context=".EizActivity">
 
-
-    <Button
-        android:id="@+id/Tolygyrak"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/thin"
-        android:text="tolygyrak..."
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="@color/black"
-        android:textColorLink="#FFEB3B"
-        android:textCursorDrawable="@drawable/input_field"
-        app:backgroundTint="@color/colorPrimary"
-        app:iconTint="#E8E3E3"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.64" />
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/bottom_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
         android:fontFamily="@font/regular"
         android:rotation="270"
         android:text="Important"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName3"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
-        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName3"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName3"
-        app:layout_constraintVertical_bias="0.518" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.138" />
 
     <TextView
         android:id="@+id/textView12"
@@ -75,34 +71,33 @@
         android:fontFamily="@font/bold"
         android:text="Eisenhower kestesi"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.867" />
+        app:layout_constraintVertical_bias="0.272" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="288dp"
         android:fontFamily="@font/regular"
         android:rotation="270"
         android:text="Not so important"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName6"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName6"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName6"
-        app:layout_constraintVertical_bias="0.509" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName6"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
         android:layout_width="153dp"
         android:layout_height="125dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginTop="368dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="344dp"
         android:background="@drawable/input_field3"
         android:ems="10"
         android:inputType="textPersonName"
@@ -118,7 +113,7 @@
         android:layout_height="125dp"
         android:layout_marginStart="12dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="368dp"
+        android:layout_marginTop="344dp"
         android:background="@drawable/input_field2"
         android:ems="10"
         android:inputType="textPersonName"
@@ -133,8 +128,8 @@
         android:id="@+id/editTextTextPersonName6"
         android:layout_width="153dp"
         android:layout_height="125dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="24dp"
         android:autoText="false"
         android:background="@drawable/input_field2"
@@ -166,6 +161,22 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName6"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+    <Button
+        android:id="@+id/btn8"
+        android:layout_width="125dp"
+        android:layout_height="37dp"
+        android:fontFamily="@font/thin"
+        android:text="tolygyrak..."
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="@color/black"
+        android:textColorLink="#FFEB3B"
+        android:textCursorDrawable="@drawable/input_field"
+        app:backgroundTint="@color/colorPrimary"
+        app:iconTint="#E8E3E3"
+  />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

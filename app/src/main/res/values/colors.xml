@@ -9,4 +9,13 @@
     <color name="vilvet">#41335C</color>
     <color name="redd">#EE565D</color>
     <color name="light_gray">#E8EBEC</color>
+    <color name="MidnightBlue">#1F4E7A</color>
+    <color name="pink">#FD7B7C</color>
+    <color name="blue1">#336089</color>
+    <color name="blue2">#30699A</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
 </resources>

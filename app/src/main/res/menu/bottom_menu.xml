@@ -2,12 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/Home"
+        android:id="@+id/navigation_home"
         android:title="Home" android:icon="@drawable/ic_home"/>
     <item
-        android:id="@+id/Calendar"
+        android:id="@+id/navigation_calendar"
         android:title="Calendar" android:icon="@drawable/ic_calendar"/>
     <item
-        android:id="@+id/Done"
+        android:id="@+id/navigation_done"
         android:title="Done"  android:icon="@drawable/ic_done"/>
+
+
+
 </menu>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imageView" type="id" />
+    <item name="imageView3" type="id" />
+    <item name="checkBox2" type="id" />
+    <item name="imageButton2" type="id" />
+    <item name="imageButton3" type="id" />
+    <item name="imageView2" type="id" />
+    <item name="imageView7" type="id" />
+    <item name="imageView8" type="id" />
+</resources>

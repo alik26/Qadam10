@@ -1,54 +1,55 @@
 package com.example.qadam10;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import androidx.annotation.NonNull;
+import android.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class LoginActivity extends AppCompatActivity {
 
-    BottomNavigationView bottomNavigation;
-
-    @Override
+    ImageButton plusBtn;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
 
-        BottomNavigationView bottomNav=(BottomNavigationView)findViewById(R.id.bottomNavigationView);
-        bottomNav.setOnNavigationItemSelectedListener(navListener);
+        BottomNavigationView btnNav = findViewById(R.id.bottomNavigationView);
+        btnNav.setOnNavigationItemSelectedListener(navlistener);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout,new homeFragment()).commit();
+        getFragmentManager().beginTransaction().replace(R.id.fragment_layout,new HomeFragment()).commit();
+
 
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment selectedFragment = null;
 
-            switch (item.getItemId()) {
-                case R.id.Home:
-                    selectedFragment = new homeFragment ();
-                    break;
-                case R.id.Calendar:
-                    selectedFragment = new calendarFragment();
-                    break;
-                case R.id.Done:
-                    selectedFragment = new doneFragment();
-                    break;
-            }
-            assert selectedFragment != null;
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectedFragment).commit();
+    private  BottomNavigationView.OnNavigationItemSelectedListener navlistener = new
+            BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    Fragment selectedFragment = null;
 
-            return true;
-        }
-    };
 
+                    switch (item.getItemId()) {
+                        case R.id.navigation_home:
+                            selectedFragment = new HomeFragment();
+                            break;
+
+                        case R.id.navigation_done:
+                            selectedFragment = new DoneFragment();
+                            break;
+                    }
+                    getFragmentManager().beginTransaction().replace(R.id.fragment_layout,selectedFragment).commit();
+
+                    return true;
+                }
+            };
 }
-
