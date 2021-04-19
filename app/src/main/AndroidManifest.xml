@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Qadam10">
-        <activity android:name=".EizActivity"/>
-        <activity android:name=".zhana_tap" />
+        <activity
+            android:name=".SignActivity"
+            android:label="@string/title_activity_sign"
+            android:theme="@style/Theme.Qadam10.NoActionBar"></activity>
+        <activity android:name=".EizActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

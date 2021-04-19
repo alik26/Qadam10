@@ -34,9 +34,7 @@
         android:name="com.example.qadam10.ZhanaTapsyrmaFragment"
         android:label="fragment_zhana_tapsyrma"
         tools:layout="@layout/fragment_zhana_tapsyrma" >
-        <action
-            android:id="@+id/action_zhanaTapsyrmaFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+
     </fragment>
 
 </navigation>

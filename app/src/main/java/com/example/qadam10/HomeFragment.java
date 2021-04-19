@@ -1,17 +1,12 @@
 package com.example.qadam10;
 
-import android.app.Activity;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-import android.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
+
+import androidx.fragment.app.Fragment;
 
 
 public class HomeFragment extends Fragment {
@@ -29,18 +24,16 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-        ImageButton zhanatapsyrma = (ImageButton) rootView.findViewById(R.id.imageButton3);
-
-        zhanatapsyrma.setOnClickListener(new View.OnClickListener() {
+        ImageButton zhana= (ImageButton)rootView.findViewById(R.id.imageButton3);
+        zhana.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                AppCompatActivity activity = (AppCompatActivity) rootView.getContext();
-                Fragment nextFrag= new Fragment();
-
-                activity.getFragmentManager().beginTransaction()
-                        .replace(R.id.zhanaTapsyrmaFragment,nextFrag).addToBackStack(null).commit();
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout,new ZhanaTapsyrmaFragment()).commit();
             }
         });
+
+
         return rootView;
     }
+
 }

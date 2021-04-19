@@ -1,21 +1,26 @@
 package com.example.qadam10;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
+
 import androidx.annotation.NonNull;
-import android.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity  {
 
+
+    FragmentTransaction fTrans;
     ImageButton plusBtn;
+
+
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,13 +30,13 @@ public class LoginActivity extends AppCompatActivity {
         BottomNavigationView btnNav = findViewById(R.id.bottomNavigationView);
         btnNav.setOnNavigationItemSelectedListener(navlistener);
 
-        getFragmentManager().beginTransaction().replace(R.id.fragment_layout,new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, new HomeFragment()).commit();
 
 
     }
 
 
-    private  BottomNavigationView.OnNavigationItemSelectedListener navlistener = new
+    private BottomNavigationView.OnNavigationItemSelectedListener navlistener = new
             BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -47,9 +52,13 @@ public class LoginActivity extends AppCompatActivity {
                             selectedFragment = new DoneFragment();
                             break;
                     }
-                    getFragmentManager().beginTransaction().replace(R.id.fragment_layout,selectedFragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_layout, selectedFragment).commit();
 
                     return true;
                 }
             };
+
+
+
+
 }

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "114185392703",
+    "project_id": "qadam-b8160",
+    "storage_bucket": "qadam-b8160.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114185392703:android:4ea603df8a1877a7629e8a",
+        "android_client_info": {
+          "package_name": "com.example.qadam10"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114185392703-5cm3nq8h9r7v41rt8csis2lp5atbr3ac.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.qadam10",
+            "certificate_hash": "05f9778a0c2b676a8acefaf3e502c954d51c659a"
+          }
+        },
+        {
+          "client_id": "114185392703-2imn9fo4biqm8nhrctfm4l6c3nanju4o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh4mhAE1KYXoyAAK0SNCZHlYcZ7Q5ISak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114185392703-2imn9fo4biqm8nhrctfm4l6c3nanju4o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
